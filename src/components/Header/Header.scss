@@ -1,0 +1,39 @@
+.header {
+  border: 1px solid gray;
+  border-right: none;
+  border-left: none;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+  }
+  .social-media {
+    &__icon-wrapper {
+      width: 200px;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    width: 200px;
+    height: 100%;
+    line-height: 100px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  &__menu-icons {
+    width: 60px;
+    height: 100%;
+    line-height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
