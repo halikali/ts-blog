@@ -12,7 +12,7 @@
   }
   .social-media {
     &__icon-wrapper {
-      width: 200px;
+      gap: 10px;
       height: 100%;
       display: flex;
       justify-content: space-around;
@@ -29,7 +29,7 @@
   }
 
   &__menu-icons {
-    width: 60px;
+    gap: 10px;
     height: 100%;
     line-height: 100px;
     display: flex;
