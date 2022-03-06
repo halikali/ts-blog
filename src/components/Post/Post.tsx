@@ -10,12 +10,14 @@ const Post: React.FC<IPostProps> = (props) => {
   const { type } = props;
 
   return (
-    <div className={`post ${type}`}>
-      <img
-        src="https://image.shutterstock.com/image-photo/homemade-granola-nuts-raisins-kiwi-600w-636196073.jpg"
-        alt="post"
-        className="post__image"
-      />
+    <div className={`post ${type || ""}`}>
+      <div className="post__image-wrapper">
+        <img
+          src="https://image.shutterstock.com/image-photo/homemade-granola-nuts-raisins-kiwi-600w-636196073.jpg"
+          alt="post"
+          className="post__image"
+        />
+      </div>
       <div className="post__info">
         <p className="post__category">lifestyle</p>
         <p className="post__text-content">
