@@ -1,0 +1,213 @@
+//--Browser On ekleri------------------------
+@mixin vendor-prefix($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+  -ms-#{$name}: #{$argument};
+  -moz-#{$name}: #{$argument};
+  -o-#{$name}: #{$argument};
+  #{$name}: #{$argument};
+}
+
+//--General ---------------------------------
+@mixin line-clamp($count, $line-height: 0) {
+  @if ($line-height !=0) {
+    height: calc(#{$count} * #{$line-height});
+  }
+
+  @if $count==1 {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    overflow: hidden;
+    white-space: inherit;
+
+    @include browser(ie) {
+      display: block;
+    }
+
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $count;
+
+    /*@if ($line-height) {
+          @include browser(firefox) {
+            height: calc($count * $line-height);
+            somewhere: isHere;
+          }
+        }*/
+  }
+}
+
+//--Clearfix---------------------------------
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+//--Breakpoints------------------------------
+@mixin media($point) {
+  @if $point==ex-small-mobil {
+    @media (max-width: 320px) {
+      @content;
+    }
+  }
+
+  @if $point==only-ex-small-mobil {
+    @media (max-width: 374px) {
+      @content;
+    }
+  }
+
+  @if $point==ex-small-device {
+    @media (max-width: 599px) {
+      @content;
+    }
+  }
+
+  @if $point==mobil {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+
+  @if $point==pre-mobil {
+    @media (min-width: 544px) {
+      @content;
+    }
+  }
+
+  @if $point==small-device {
+    @media (min-width: 600px) {
+      @content;
+    }
+  }
+
+  @if $point==only-ex-small-device {
+    @media (min-width: 321px) and (max-width: 599px) {
+      @content;
+    }
+  }
+
+  @if $point==only-small-device {
+    @media (min-width: 600px) and (max-width: 767px) {
+      @content;
+    }
+  }
+
+  @if $point==small-and-only-tablet {
+    @include media(only-small-device) {
+      @content;
+    }
+
+    @include media(only-tablet) {
+      @content;
+    }
+  }
+
+  @if $point==mobil-landscape {
+    @media screen and (orientation: landscape) {
+      @content;
+    }
+  } @else if $point==tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $point==only-tablet {
+    @media (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  } @else if $point==print {
+    @media print {
+      @content;
+    }
+  } @else if $point==web {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $point==only-web {
+    @media (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+  } @else if $point==wide {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $point==pre-wide {
+    @media (min-width: 1260px) and (max-width: 1470px) {
+      @content;
+    }
+  } @else if $point==big {
+    @media (min-width: 1470px) {
+      @content;
+    }
+  } @else if $point==mobile-web {
+    @media (min-width: 375px) and (max-width: 992px) {
+      @content;
+    }
+  } @else if $point==wide-max {
+    @media (min-width: 1470px) {
+      @content;
+    }
+  } @else if $point==pre-wide-expanded {
+    @media (min-width: 992px) and (max-width: 1470px) {
+      @content;
+    }
+  }
+}
+
+// -- Border Radius --
+@mixin radius($radiusValue) {
+  -webkit-border-radius: $radiusValue + px;
+  -moz-border-radius: $radiusValue + px;
+  -o-border-radius: $radiusValue + px;
+  border-radius: $radiusValue + px;
+}
+
+@mixin customScroll($width, $radius, $color) {
+  &::-webkit-scrollbar {
+    width: $width; // 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color;
+    // $color-gray;
+    border-radius: $radius; // 4px;
+  }
+
+  &::-webkit-resizer {
+    display: none;
+  }
+
+  scrollbar-width: thin;
+  overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
+}
+
+@mixin aspect-ratio-img($width, $height) {
+  position: relative;
+
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
