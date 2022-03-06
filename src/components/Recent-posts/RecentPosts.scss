@@ -1,0 +1,22 @@
+.recent-posts {
+  &__title {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: black;
+    margin-bottom: 15px;
+    font-weight: bold;
+
+    &::after {
+      content: "";
+      width: calc(100% - 120px);
+      height: 1px;
+      background: black;
+      opacity: 0.4;
+      position: absolute;
+      right: 0;
+      top: 5px;
+      z-index: 2;
+    }
+  }
+}
