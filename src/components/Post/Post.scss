@@ -7,7 +7,7 @@
 
   &__image-wrapper {
     position: relative;
-    
+
     &::after {
       content: "";
       width: 100%;
@@ -82,6 +82,10 @@
       height: auto;
       background-color: white;
       bottom: 180px;
+      color: black;
+      position: static;
+      height: auto;
+      padding: 5% 0;
     }
   }
 }
