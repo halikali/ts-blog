@@ -2,6 +2,7 @@ import Ad from "components/Ads";
 import CategoryPost from "components/Category-post";
 import LandingCards from "components/Landing-cards";
 import RecentPosts from "components/Recent-posts";
+import SocialMedia from "components/SocialMedia";
 
 const HomePage = () => {
   return (
@@ -16,6 +17,7 @@ const HomePage = () => {
         </div>
         <div className="d-none d-lg-block col-12 col-md-4">
           <Ad type={"box"} />
+          <SocialMedia />
         </div>
       </div>
     </>
