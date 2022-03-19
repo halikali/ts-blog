@@ -1,0 +1,41 @@
+.small-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  margin-bottom: 30px;
+
+  &__image {
+    width: 138px;
+    height: 90px;
+  }
+
+  &__content {
+    width: calc(100% - 160px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  &__category-name {
+    color: #ee4266;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    color: #11151c;
+    font-size: 20px;
+    font-weight: 700;
+    height: 43px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+}
