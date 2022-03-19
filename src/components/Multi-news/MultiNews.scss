@@ -1,0 +1,7 @@
+@import "../../common-css/mixins";
+
+.multi-news {
+  @include media(wide) {
+    column-count: 3;
+  }
+}
