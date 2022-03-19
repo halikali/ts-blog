@@ -1,32 +1,9 @@
+@import "../../common-css/mixins";
+
 .popular-posts {
   margin-top: 10px;
 
-  &__category-name-wrapper {
-    display: block;
-    height: 30px;
-    position: relative;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: black;
-    font-weight: bold;
-    background-color: white;
-
-    &::after {
-      content: "";
-      width: 100%;
-      height: 1px;
-      background: black;
-      opacity: 0.4;
-      position: absolute;
-      right: 0;
-      top: 5px;
-      z-index: 2;
-    }
-  }
-  &__category-name {
-    width: auto;
-    background-color: white;
-    position: relative;
-    z-index: 3;
+  &__name-wrapper {
+    @include name-wrapper(".popular-posts");
   }
 }

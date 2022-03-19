@@ -10,8 +10,8 @@ import "./SocialMedia.scss";
 const SocialMedia = () => {
   return (
     <div className="mt-5">
-      <p className="social-media__text-wrapper">
-        <span className="social-media__text">SOCIAL MEDIA</span>
+      <p className="social-media__name-wrapper">
+        <span className="social-media__name">SOCIAL MEDIA</span>
       </p>
 
       <div className="social-media__wrapper">

@@ -3,9 +3,9 @@ import "./PopularPosts.scss";
 
 const PopularPosts = () => {
   return (
-    <div className="popular-posts">
-      <p className="popular-posts__category-name-wrapper">
-        <span className="popular-posts__category-name">Popular Posts </span>
+    <div className="popular-posts mt-5">
+      <p className="popular-posts__name-wrapper">
+        <span className="popular-posts__name">Popular Posts </span>
       </p>
       <SmallPost />
       <SmallPost />

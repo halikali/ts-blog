@@ -11,8 +11,8 @@ const CategoryPost: React.FC<ICategoryPostProps> = (props) => {
 
   return (
     <div className="category-post">
-      <p className="category-post__post-name-wrapper">
-        <span className="category-post__post-name">{categoryName} </span>
+      <p className="category-post__name-wrapper">
+        <span className="category-post__name">{categoryName} </span>
       </p>
       <div className="row">
         <div className="col-12 col-lg-4">
