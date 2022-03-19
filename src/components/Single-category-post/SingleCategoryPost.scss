@@ -1,0 +1,7 @@
+@import "../../common-css/mixins";
+
+.single-category-post {
+  &__name-wrapper {
+    @include name-wrapper(".single-category-post");
+  }
+}
