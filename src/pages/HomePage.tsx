@@ -8,6 +8,7 @@ import SocialMedia from "components/SocialMedia";
 import MultiNews from "components/Multi-news";
 import SingleCategoryPost from "components/Single-category-post";
 import Post from "components/Post";
+import AllPosts from "components/AllPosts";
 
 const HomePage = () => {
   return (
@@ -22,8 +23,8 @@ const HomePage = () => {
         </div>
         <div className="d-none d-lg-block col-12 col-md-4">
           <Ad type={"box"} />
-          <CategoryList />
           <SocialMedia />
+          <CategoryList />
           <PopularPosts />
         </div>
       </div>
@@ -46,6 +47,15 @@ const HomePage = () => {
       </div>
       <div className="row">
         <MultiNews />
+      </div>
+      <div className="row">
+        <div className="col-12 col-lg-8">
+          <AllPosts />
+        </div>
+        <div className="d-none d-lg-block col-12 col-md-4">
+          <PopularPosts />
+          <Ad type="box" />
+        </div>
       </div>
     </>
   );
