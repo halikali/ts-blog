@@ -4,7 +4,7 @@ const CategoryList = () => {
   return (
     <div className="category-list__wrapper">
       <p className="category-list__name-wrapper">
-        <span className="category-list__name"> category list </span>
+        <span className="category-list__name"> categories </span>
       </p>
       <ul className="category-list">
         <li className="category-list__item">
