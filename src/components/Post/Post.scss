@@ -74,6 +74,12 @@
       left: unset;
       bottom: -100px;
     }
+
+    .post__image-wrapper {
+      &::after {
+        display: none;
+      }
+    }
   }
 
   &.type-2 {
@@ -86,6 +92,12 @@
       position: static;
       height: auto;
       padding: 5% 0;
+    }
+
+    .post__image-wrapper {
+      &::after {
+        display: none;
+      }
     }
   }
 }
