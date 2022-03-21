@@ -6,6 +6,7 @@ import { exampleAction } from "store/actions/exampleAction";
 import routes from "routes";
 import "./App.scss";
 import Header from "components/Header";
+import Footer from "components/Footer";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -24,6 +25,7 @@ const App = () => {
           ))}
         </Routes>
       </div>
+      <Footer />
     </>
   );
 };
