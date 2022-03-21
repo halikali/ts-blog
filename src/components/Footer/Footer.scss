@@ -1,3 +1,5 @@
+@import "../../common-css/mixins";
+
 .footer {
   color: #97989b;
   background: #1b1c1e;
@@ -6,7 +8,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 140px;
+    padding: 20px;
+
+    @include media(tablet) {
+      padding: 50px 0;
+    }
   }
 
   &__list-wrapper {
@@ -14,6 +20,11 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
+    flex-direction: column;
+
+    @include media(tablet) {
+      flex-direction: row;
+    }
   }
 
   &__list-item {
