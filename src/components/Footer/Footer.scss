@@ -1,0 +1,27 @@
+.footer {
+  color: #97989b;
+  background: #1b1c1e;
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 140px;
+  }
+
+  &__list-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__list-item {
+    a {
+      padding: 10px;
+      display: block;
+      width: 100%;
+      color: #97989b;
+    }
+  }
+}
