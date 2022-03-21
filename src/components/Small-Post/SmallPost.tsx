@@ -4,7 +4,7 @@ const SmallPost = () => {
   return (
     <div className="small-card">
       <img
-        src="https://image.shutterstock.com/image-photo/homemade-granola-nuts-raisins-kiwi-600w-636196073.jpg"
+        src="https://image.shutterstock.com/image-photo/underpass-sign-sky-background-600w-2137028029.jpg"
         alt=""
         className="small-card__image"
       />

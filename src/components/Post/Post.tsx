@@ -13,7 +13,7 @@ const Post: React.FC<IPostProps> = (props) => {
     <div className={`post ${type || ""}`}>
       <div className="post__image-wrapper">
         <img
-          src="https://image.shutterstock.com/image-photo/homemade-granola-nuts-raisins-kiwi-600w-636196073.jpg"
+          src="https://image.shutterstock.com/image-photo/decorative-indoor-lightning-retro-bulbs-600w-2134575209.jpg"
           alt="post"
           className="post__image"
         />
