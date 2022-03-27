@@ -5,11 +5,13 @@ const AllPosts = () => {
     <div className="all-posts mt-5">
       {Array.from({ length: 5 }).map((item) => (
         <div className="card">
-          <img
-            src="https://image.shutterstock.com/image-photo/homemade-granola-nuts-raisins-kiwi-600w-636196073.jpg"
-            alt="post"
-            className="card__image"
-          />
+          <div className="card__image-wrapper">
+            <img
+              src="https://image.shutterstock.com/image-photo/homemade-granola-nuts-raisins-kiwi-600w-636196073.jpg"
+              alt="post"
+              className="card__image"
+            />
+          </div>
           <div className="card__body">
             <p className="card__category-name">travel</p>
             <h4 className="card__title">Lorem ipsum dolor sit amet.</h4>
