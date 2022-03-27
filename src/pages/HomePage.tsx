@@ -21,7 +21,7 @@ const HomePage = () => {
           <CategoryPost categoryName="FASHION & TRAVEL" />
           <CategoryPost categoryName="TECHNOLOGY & HEALTH" />
         </div>
-        <div className="col-12 col-md-4">
+        <div className="col-12 col-lg-4">
           <Ad type={"box"} />
           <SocialMedia />
           <CategoryList />
@@ -52,7 +52,7 @@ const HomePage = () => {
         <div className="col-12 col-lg-8">
           <AllPosts />
         </div>
-        <div className="d-none d-lg-block col-12 col-md-4">
+        <div className="d-none d-lg-block col-12 col-lg-4">
           <PopularPosts />
           <Ad type="box" />
         </div>
