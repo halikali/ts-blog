@@ -3,7 +3,7 @@ import React from "react";
 import "./Post.scss";
 
 interface IPostProps {
-  type?: string;
+  type?: "type-1" | "type-2";
 }
 
 const Post: React.FC<IPostProps> = (props) => {
