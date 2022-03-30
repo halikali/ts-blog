@@ -7,6 +7,7 @@ import routes from "routes";
 import "./App.scss";
 import Header from "components/Header";
 import Footer from "components/Footer";
+import MobileNavbar from "components/Mobile-navbar";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -26,6 +27,8 @@ const App = () => {
         </Routes>
       </div>
       <Footer />
+
+      <MobileNavbar />
     </>
   );
 };
