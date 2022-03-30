@@ -3,8 +3,8 @@ import "./AllPosts.scss";
 const AllPosts = () => {
   return (
     <div className="all-posts mt-5">
-      {Array.from({ length: 5 }).map((item) => (
-        <div className="card">
+      {Array.from({ length: 5 }).map((item, i) => (
+        <div className="card" key={i}>
           <div className="card__image-wrapper">
             <img
               src="https://image.shutterstock.com/image-photo/homemade-granola-nuts-raisins-kiwi-600w-636196073.jpg"
