@@ -1,0 +1,44 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  width: 320px;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  padding: 25px 0;
+  opacity: 0;
+  transform: scale(0);
+  
+  &__icon-wrapper {
+    width: 100%;
+    text-align: right;
+    padding-right: 25px;
+  }
+
+  &__close-icon {
+    font-size: 32px;
+  }
+
+  &__list-wrapper {
+    width: calc(100% - 50px);
+    height: auto;
+    margin: 20px auto;
+  }
+
+  &__list-item {
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(219, 219, 219, 0.26);
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+  }
+
+  &.opened {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
