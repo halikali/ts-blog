@@ -34,4 +34,10 @@
     justify-content: space-around;
     align-items: center;
   }
+
+  &__menu-icon {
+    &--navbar {
+      cursor: pointer;
+    }
+  }
 }
