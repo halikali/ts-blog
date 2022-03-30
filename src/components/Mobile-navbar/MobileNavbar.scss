@@ -2,7 +2,8 @@
   display: block;
   position: fixed;
   top: 0;
-  right: 0;
+  right: -320px;
+  transition: right 0.3s ease-in;
   z-index: 10;
   width: 320px;
   height: 100vh;
@@ -11,7 +12,7 @@
   padding: 15px 0;
   opacity: 0;
   transform: scale(0);
-  
+
   &__icon-wrapper {
     width: 100%;
     text-align: right;
@@ -40,7 +41,9 @@
   }
 
   &.opened {
+    right: 0;
     opacity: 1;
     transform: scale(1);
+    transition: right 0.3s ease-in;
   }
 }
