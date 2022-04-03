@@ -6,6 +6,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faBars, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 
 import "./Header.scss";
@@ -42,7 +43,7 @@ const Header = () => {
           />
         </div>
 
-        <p className="header__logo">Callie</p>
+        <Link to={"/"} className="header__logo">Callie</Link>
 
         <div className={"header__menu-icons"}>
           <FontAwesomeIcon
