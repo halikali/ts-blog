@@ -1,0 +1,103 @@
+.details {
+  &__header {
+    height: 400px;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(rgba(27, 28, 30, 0)),
+        color-stop(90%, rgba(27, 28, 30, 0.8))
+      );
+      background: linear-gradient(
+        180deg,
+        rgba(27, 28, 30, 0) 0%,
+        rgba(27, 28, 30, 0.8) 90%
+      );
+    }
+  }
+
+  &__text-wrapper {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    z-index: 1;
+    width: 80%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  &__category-name {
+    color: #ee4266;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+  }
+
+  &__author {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  &__created-date {
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  &__body {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #11151c;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font: 400 16px/24px "Roboto", sans-serif;
+      margin-bottom: 20px;
+    }
+  }
+
+  .dot {
+    position: relative;
+    &::after {
+      content: "•";
+      display: inline-block;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+}
