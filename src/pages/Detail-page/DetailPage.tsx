@@ -23,6 +23,7 @@ const DetailPage = () => {
           style={{
             backgroundImage: `url(${ımage})`,
             backgroundPosition: `50% -${scroll}px`,
+            transition: "all .5s ease",
           }}
         >
           <div className="details__text-wrapper">
