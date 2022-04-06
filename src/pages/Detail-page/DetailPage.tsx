@@ -13,8 +13,19 @@ const DetailPage = () => {
     window.addEventListener("scroll", (e: any) => {
       setScroll(e.currentTarget.scrollY);
     });
+
+    return () => {
+      window.removeEventListener("scroll", () => {});
+    };
   }, [scroll]);
 
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
   return (
     <div className="row details">
       <div className="col-12 mb-5">
@@ -23,7 +34,7 @@ const DetailPage = () => {
           style={{
             backgroundImage: `url(${ımage})`,
             backgroundPosition: `50% -${scroll}px`,
-            transition: "all .5s ease",
+            transition: "all .3s ease",
           }}
         >
           <div className="details__text-wrapper">
