@@ -7,6 +7,13 @@ import "./DetailPage.scss";
 
 const DetailPage = () => {
   const ımage = "https://preview.colorlib.com/theme/callie/img/media-2.jpg";
+  const [scroll, setScroll] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener("scroll", (e: any) => {
+      setScroll(e.currentTarget.scrollY);
+    });
+  }, [scroll]);
 
   return (
     <div className="row details">
@@ -15,7 +22,7 @@ const DetailPage = () => {
           className="details__header"
           style={{
             backgroundImage: `url(${ımage})`,
-            backgroundPosition: "50% 50%",
+            backgroundPosition: `50% -${scroll}px`,
           }}
         >
           <div className="details__text-wrapper">
