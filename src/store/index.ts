@@ -1,8 +1,10 @@
 import { combineReducers } from "redux";
-import exampleReducer from "./reducers/exampleReducer";
+import GetAllPostsReducer from "./reducers/GetAllPostsReducer";
+import GetPostDetailReducer from "./reducers/GetPostDetail";
 
 const rootReducer = combineReducers({
-  example: exampleReducer,
+  AllPosts: GetAllPostsReducer,
+  Detail: GetPostDetailReducer,
 });
 
 export default rootReducer;
