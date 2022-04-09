@@ -9,8 +9,17 @@ import MultiNews from "components/Multi-news";
 import SingleCategoryPost from "components/Single-category-post";
 import Post from "components/Post";
 import AllPosts from "components/AllPosts";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { getAllPosts } from "store/actions/postActions";
 
 const HomePage = () => {
+  const dispatch = useDispatch();
+  
+  useEffect(() => {
+    dispatch(getAllPosts());
+  }, []);
+
   return (
     <>
       <LandingCards />
