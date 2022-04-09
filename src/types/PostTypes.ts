@@ -1,4 +1,5 @@
 export interface IPost {
+  id?: string;
   category: string;
   title: string;
   coverImageURL: string;
