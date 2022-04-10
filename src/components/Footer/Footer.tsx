@@ -2,7 +2,7 @@ import "./Footer.scss";
 
 const Footer = () => {
   return (
-    <footer className="container footer">
+    <footer className="container footer row mx-auto">
       <div className="footer__body">
         <p>Copyright &copy; {new Date().getFullYear()} All rights reserved</p>
         <nav>
