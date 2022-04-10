@@ -11,7 +11,7 @@ const AllPosts = () => {
     <div className="all-posts mt-5">
       {posts &&
         posts.data.map((item) => (
-          <Link to={"/details"} key={item.id}>
+          <Link to={`/details/${item.id}`} key={item.id}>
             <div className="card">
               <div className="card__image-wrapper">
                 <img
