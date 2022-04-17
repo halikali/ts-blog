@@ -6,5 +6,8 @@ export interface IAppState {
   };
   Detail?: {
     data: IPost;
-  }
+  };
+  CategoryPost?: {
+    data: IPost[];
+  };
 }

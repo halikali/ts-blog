@@ -27,8 +27,8 @@ const HomePage = () => {
         <div className="col-12 col-lg-8">
           <RecentPosts />
           <CategoryPost categoryName="lifestyle" />
-          <CategoryPost categoryName="FASHION & TRAVEL" />
-          <CategoryPost categoryName="TECHNOLOGY & HEALTH" />
+          <CategoryPost categoryName="technology" />
+          <CategoryPost categoryName="travel" />
         </div>
         <div className="col-12 col-lg-4">
           <Ad type={"box"} />
